@@ -1,0 +1,215 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f8ff; /* Light blue background for a clean look */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 10px;
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #4b6584; /* Dark slate blue for a calming effect */
+}
+
+/* Container Styling */
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #38ada9; /* Pleasant teal color */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #079992; /* Darker teal on hover */
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(1.02);
+}
+
+/* Meal Cards Layout (Ingredient and Categories) */
+#meal-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.meal-card, .category-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    gap: 20px;
+    padding: 15px;
+}
+
+.meal-card:hover, .category-card:hover {
+    transform: scale(1.05);
+}
+
+.meal-card img, .category-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.meal-card .meal-info, .category-card .category-info {
+    padding: 15px;
+}
+
+.meal-card .meal-info h3, .category-card .category-info h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.meal-card .meal-info p, .category-card .category-info p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Ingredient Cards */
+.ingredient-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+.ingredient-card .ingredient-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+}
+
+.ingredient-card .ingredient-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.ingredient-card .ingredient-item h4 {
+    font-size: 16px;
+    color: #4b6584;
+}
+
+.ingredient-card .ingredient-item p {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Category Cards */
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+.category-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+}
+
+.category-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.category-card .category-info {
+    padding: 15px;
+}
+
+.category-card .category-info h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.category-card .category-info p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    #meal-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .ingredient-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    #meal-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ingredient-card {
+        grid-template-columns: 1fr;
+    }
+
+    .category-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    #meal-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
