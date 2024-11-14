@@ -1,0 +1,81 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.sorting-controls {
+    margin-bottom: 15px;
+}
+
+.sorting-controls button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sorting-controls button:hover {
+    background-color: #0056b3;
+}
+
+.user-item {
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.user-item h3 {
+    margin: 0;
+    color: #007bff;
+}
+
+.user-item p {
+    margin: 5px 0;
+    color: #555;
+}
+
+#pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#pagination-controls button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+#pagination-controls button:hover {
+    background-color: #0056b3;
+}
