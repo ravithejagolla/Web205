@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Library Management System</h1>
+    </header>
+
+    <main>
+        <section id="books-section">
+            <h2>Books</h2>
+            <form id="book-form">
+                <input type="text" id="book-title" placeholder="Title" required>
+                <input type="text" id="book-author" placeholder="Author" required>
+                <input type="text" id="book-genre" placeholder="Genre" required>
+                <input type="number" id="book-year" placeholder="Published Year" required>
+                <input type="text" id="book-available" placeholder="Is Available? [enter Yes or No]" required>
+                <button type="submit">Add Book</button>
+            </form>
+            <div id="books-filters">
+                <select id="filter-genre">
+                    <option value="">Filter by Genre</option>
+                    <option value="Science Fiction">Science Fiction</option>
+                    <option value="Dystopian">Dystopian</option>
+                    <option value="Space Opera">Space Opera</option>
+                    <option value="Apocalyptic Fiction">Apocalyptic Fiction</option>
+                    <option value="Military Science Fiction">Military Science Fiction</option>
+                </select>
+                <select id="sort-books">
+                    <option value="">Sort by</option>
+                    <option value="title">Title</option>
+                    <option value="author">Author</option>
+                    <option value="publishedYear">Published Year</option>
+                </select>
+            </div>
+            <div id="books-list"></div>
+            <div id="books-pagination">
+                <button id="prev-books" disabled>Previous</button>
+                <span id="books-page-info"></span>
+                <button id="next-books">Next</button>
+            </div>
+        </section>
+
+        <section id="members-section">
+            <h2>Members</h2>
+            <form id="member-form">
+                <input type="text" id="member-name" placeholder="Name" required>
+                <input type="date" id="member-date" required>
+                <button type="submit">Add Member</button>
+            </form>
+            <div id="members-filters">
+                <select id="filter-members">
+                    <option value="">Filter by Status</option>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                </select>
+                <select id="sort-members">
+                    <option value="">Sort by</option>
+                    <option value="name">Name</option>
+                    <option value="membershipDate">Membership Date</option>
+                </select>
+            </div>
+            <div id="members-list"></div>
+            <div id="members-pagination">
+                <button id="prev-members" disabled>Previous</button>
+                <span id="members-page-info"></span>
+                <button id="next-members">Next</button>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
